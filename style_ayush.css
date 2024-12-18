@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+header .logo h1 {
+    font-size: 2.5rem;
+    color: #ffcc00;
+    letter-spacing: 2px;
+    animation: logoAnimation 3s infinite;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ffcc00;
+    border-radius: 5px;
+}
+
+.hero {
+    height: 80vh;
+    background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 3s ease-out;
+}
+
+.hero-text {
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInUp 2s 0.5s forwards;
+}
+
+.hero button {
+    padding: 15px 30px;
+    background-color: #ffcc00;
+    color: #111;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.hero button:hover {
+    transform: scale(1.1);
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+}
+
+.feature {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    width: 30%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    background-color: #444;
+}
+
+.feature h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1.1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    margin-top: 50px;
+}
+
+@keyframes logoAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
